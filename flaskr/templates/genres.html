@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Genres</title>
+</head>
+<body>
+<h1>List Of Available Genres </h1>
+{% for obj in cont %}
+<h2><a href="{{ url_for('music.tracks_of_genre_view', genre=obj.title) }}">{{ obj.title }}</a></h2>
+
+{% endfor %}
+</body>
+</html>
